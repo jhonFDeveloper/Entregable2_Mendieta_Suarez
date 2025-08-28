@@ -9,15 +9,15 @@ body {
 }
 
 .contenedor-main{
-  max-width: 1200px; /* o el ancho que quieras */
-  margin: 0 auto;    /* centra el contenedor */
-  padding: 0 20px;   /* espacio lateral opcional */
+  max-width: 1200px; 
+  margin: 0 auto;    
+  padding: 0 20px;   
 }
 
 .header-contenido {
   display: flex;
-  justify-content: space-between; /* separa en extremos */
-  align-items: center; /* centra verticalmente */
+  justify-content: space-between; 
+  align-items: center; 
 }
 header {
   position: sticky;
@@ -82,8 +82,8 @@ nav ul li a:hover {
 }
 
 .img-producto img {
-  height: 200px; /* altura fija */
-  object-fit: contain; /* la imagen se ajusta sin deformarse */
+  height: 200px; 
+  object-fit: contain; 
   border-radius: 8px;
 }
 
@@ -97,21 +97,20 @@ nav ul li a:hover {
   font-weight: bold;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s ease;   /* Transiciones suaves */
+  transition: all 0.2s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== Hover: cuando el mouse pasa por encima ===== */
+
 .btn-eliminar:hover {
-  background: #e60000;        /* Rojo más brillante */
-  transform: translateY(-2px); /* Efecto de levantarse */
+  background: #e60000;       
+  transform: translateY(-2px); 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* ===== Active: cuando hacen click ===== */
 .btn-eliminar:active {
-  background: #990000;         /* Rojo más oscuro */
-  transform: scale(0.95);      /* Efecto de presionar */
+  background: #990000;         
+  transform: scale(0.95);      
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -125,20 +124,20 @@ nav ul li a:hover {
   font-weight: bold;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s ease;   /* Transiciones suaves */
+  transition: all 0.2s ease; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== Hover: cuando el mouse pasa por encima ===== */
+
 .btn-clear:hover {
-  background: #e60000;        /* Rojo más brillante */
-  transform: translateY(-2px); /* Efecto de levantarse */
+  background: #e60000;      
+  transform: translateY(-2px); 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* ===== Active: cuando hacen click ===== */
+
 .btn-clear:active {
-  background: #990000;         /* Rojo más oscuro */
-  transform: scale(0.95);      /* Efecto de presionar */
+  background: #990000;        
+  transform: scale(0.95);      
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

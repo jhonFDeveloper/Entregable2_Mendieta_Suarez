@@ -24,7 +24,7 @@ const renderProducts = () => {
      <div class="img-producto">
       <img src="${producto.imagen}" alt="${producto.nombre}">
      </div>
-     <div class"info-producto">
+     <div >
        <h3>$${producto.precio}</h3>
        <h5>${producto.nombre}</h5>
        <button class="btn-agregar" onclick="addProduct(${producto.id})">Agregar al carrito</button>
@@ -37,10 +37,13 @@ const renderProducts = () => {
 };
 renderProducts();
 
-let carrito = JSON.parse(localStorage.getItem("cart")) || [];
+let carrito = JSON.parse(localStorage.getItem("cart") || "[]");
 
 const addProduct = (id) => {
     let productoEncontrado = productos.find((producto) => producto.id === id);
+
+  if (productoEncontrado) {
     carrito.push(productoEncontrado);
-    localStorage.setItem("cart", JSON.stringify(carrito));    
+    localStorage.setItem("cart", JSON.stringify(carrito));   
+    }
 };

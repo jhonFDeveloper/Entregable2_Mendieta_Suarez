@@ -1,4 +1,4 @@
-let productsCart = JSON.parse(localStorage.getItem("cart")) || [];
+let cartProducts = JSON.parse(localStorage.getItem("cart") || "[]");
 
 
 const renderProducts = () => {
@@ -6,7 +6,7 @@ const renderProducts = () => {
   let container = document.querySelector(".contenedor-productos-carrito");
   let contenidoHTML = "";
 
-  productsCart.forEach((producto) => {
+  cartProducts.forEach((producto) => {
     contenidoHTML += `
     <div class="producto">
      <div class="img-producto">
@@ -15,7 +15,7 @@ const renderProducts = () => {
      <div class"info-producto">
        <h3>$${producto.precio}</h3>
        <h5>${producto.nombre}</h5>
-       <button class="btn-eliminar" onclick="addProduct(${producto.id})">Quitar Producto</button>
+       <button class="btn-eliminar" onclick="removeProduct(${producto.id})">Quitar Producto</button>
      </div>
         </div>        
         `;
@@ -24,3 +24,19 @@ const renderProducts = () => {
   container.innerHTML = contenidoHTML;
 };
 renderProducts();
+
+
+let btnEmpty  = document.getElementById("vaciar");
+
+btnEmpty.addEventListener("click" , () => {
+localStorage.removeItem("cart");
+cartProducts = [];
+renderProducts();
+});
+
+const removeProduct = (id) => {
+  let arrayPorductsRemove = cartProducts.filter((producto) => producto.id !== id);
+  cartProducts = arrayPorductsRemove;
+  localStorage.setItem("cart", cartProducts);
+  renderProducts();
+};
