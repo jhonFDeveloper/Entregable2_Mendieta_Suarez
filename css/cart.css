@@ -120,6 +120,7 @@ nav ul li a:hover {
   border: none;
   padding: 12px 20px;
   margin: 10px;  
+  margin-top: 50px;
   font-size: 16px;
   font-weight: bold;
   border-radius: 10px;
@@ -140,4 +141,10 @@ nav ul li a:hover {
   background: #990000;        
   transform: scale(0.95);      
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

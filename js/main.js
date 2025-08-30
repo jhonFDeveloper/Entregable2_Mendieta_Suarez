@@ -11,7 +11,8 @@ const productos = [
   { id: 10, nombre: "Monitor 27'' Full HD", precio: 800, stock: 9, imagen: "assets/monitor.webp"},
 ];
 
-
+// Pofe te pido mis disculpas por entregarlo completo por temas laborales no le pude dedicar mucho tiempo al proyecto
+// Prometo esforzarme mucho más
 
 const renderProducts = () => {
 
